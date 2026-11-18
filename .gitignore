@@ -1,0 +1,8 @@
+.env
+state.json
+state.tmp
+.venv/
+__pycache__/
+*.pyc
+*.log
+2026-*.txt

@@ -1,0 +1,14 @@
+[Unit]
+Description=Claude Code Telegram bot
+After=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/claude-telegram
+Environment=PATH=/home/ubuntu/.local/bin:/home/ubuntu/.nvm/versions/node/v22.23.1/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/home/ubuntu/claude-telegram/.venv/bin/python bot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
